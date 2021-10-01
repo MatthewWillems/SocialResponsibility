@@ -1,1 +1,1 @@
-# SocialResponsibility
+# Social Responsibility
