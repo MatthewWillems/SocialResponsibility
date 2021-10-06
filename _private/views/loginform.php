@@ -1,10 +1,10 @@
 <?php $this->layout('layouts::website'); ?>
 
-<h1>Aanmelden</h1>
+<h1>Inloggen</h1>
 
-<p>Schrijf je hier in om toegang te krijgen tot Transformers.community!</p>
+<p>Log in met je email en wachtwoord.</p>
 
-<form action="<?php echo url('register.handle')?>" method="POST">
+<form action="<?php echo url('login.handle')?>" method="POST">
     <div>
         <label for="email">E-mail</label>
         <input type="email" name="email" value="<?php echo input('email')?>" class="form-control" id="email" aria-describedby="emailHelp">
@@ -21,7 +21,6 @@
         <?php endif;?>
     </div><br>
     <hr>
-    <button type="submit">Aanmelden</button><br>
+    <button type="submit">Inloggen</button><br>
 
-    <small id="emailHelp">Wij gebruiken uw e-mail voor inlog, tweestapsverificatie en evt. contact indien nodig. Wij zullen uw persoonlijke informatie nergens anders voor gebruiken.</small>
 </form>

@@ -20,34 +20,14 @@ class RegistrationController {
 	}
 
     public function registrationHandler() {
-        $errors = [];
+        $result = validate_form($_POST);
 
-        $email    = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
-        $password = trim($_POST['wachtwoord']);
+        if (count($result['errors']) === 0){
 
-        if ($email === false){
-            $errors['email'] = "Ongeldig e-mailadres!";
-        };
 
-        if (empty($password) || strlen( $password ) < 6 ) {
-            $errors['wachtwoord'] = "Wachtwoord moet langer dan 6 tekens zijn!";
-        };
+            if ( notRegistered($result['data']['email'])){
 
-        if (count($errors) === 0){
-            $connection = dbConnect();
-            $sql        = "SELECT * from `gebruikers` WHERE `email` = :email";
-            $statement  = $connection->prepare($sql);
-            $statement->execute( ['email' => $email] );
-
-            if ( $statement->rowCount() === 0){
-                $sql        = "INSERT INTO `gebruikers` (`email`, `password`) VALUES (:email, :password)";
-                $statement  = $connection->prepare($sql);
-                $hashedpass = password_hash($password, PASSWORD_DEFAULT);
-                $params     = [
-                    'email'    => $email,
-                    'password' => $hashedpass
-                ];
-                $statement->execute($params);
+                createAccount($result['data']);
                 
                 $successUrl = url('register.success');
                 redirect($successUrl);
@@ -58,7 +38,7 @@ class RegistrationController {
         }
         
         $template_engine = get_template_engine();
-        echo $template_engine->render( 'registerform', ['errors' => $errors] );
+        echo $template_engine->render( 'registerform', ['errors' => $result['errors']] );
 
     }
 
