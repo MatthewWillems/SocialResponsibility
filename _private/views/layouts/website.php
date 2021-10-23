@@ -6,11 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Homepage</title>
     <link rel="stylesheet" href="<?php echo site_url( '/css/style.css' ) ?>" media="all">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700">
 </head>
 <body>
 <div class="container">
     <header>
-        <h1>Social Responsibility</h1>
+        <br>
     </header>
     <nav>
 		<?php if ( $this->section( 'navigation' ) ): ?>
