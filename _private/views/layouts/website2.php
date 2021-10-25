@@ -51,7 +51,7 @@
 <body>
 
 <div id="dashboard">
-    <div class=" header"><img src="images/logo.png" alt="Logo" height=67% style="float:left; padding: 7px;"></div>
+    <div class=" header"><img src="images/logo.png" alt="Logo" height=67.5% style="float:left; padding: 7px;"></div>
     <div class=" nav">nav</div>
     <div class=" content">content</div>
     <div class=" messages">messages</div>
