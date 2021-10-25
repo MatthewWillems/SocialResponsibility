@@ -32,9 +32,5 @@ class LoginController {
         $template_engine = get_template_engine();
 		echo $template_engine->render('loginform', ['errors' => $result['errors']]);
     }
-    
-    public function userDashboard() {
-
-    }
 
 }
