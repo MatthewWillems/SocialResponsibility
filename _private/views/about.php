@@ -1,4 +1,4 @@
-<?php $this->layout('layouts::website');?>
+<?php $this->layout('layouts::website2');?>
 
 
 <h1>Over Ons</h1>
