@@ -1,6 +1,6 @@
 <?php $this->layout('layouts::website2');?>
 
-
+<div class="about">
 <h1>Over Ons</h1>
 
 <p>Terwijl de meesten van ons wel weten wat je moet doen om fysiek gezond te zijn, leert niemand ons wat ervoor nodig om mentaal gezond te zijn. Op school niet, thuis niet, op het werk niet. Terwijl je mentale gezondheid essentieel is!

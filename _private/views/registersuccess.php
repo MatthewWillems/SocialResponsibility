@@ -1,4 +1,4 @@
-<?php $this->layout('layouts::website'); ?>
+<?php $this->layout('layouts::website2'); ?>
 
 <h1>Aanmelden gelukt!</h1>
 

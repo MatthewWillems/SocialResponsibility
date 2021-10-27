@@ -1,4 +1,4 @@
-<?php $this->layout('layouts::website'); ?>
+<?php $this->layout('layouts::website2'); ?>
 
 <h1>Aanmelden</h1>
 
@@ -20,7 +20,6 @@
             <?php echo $errors['wachtwoord']?>
         <?php endif;?>
     </div><br>
-    <hr>
     <button type="submit">Aanmelden</button><br>
 
     <small id="emailHelp">Wij gebruiken uw e-mail voor inlog, tweestapsverificatie en evt. contact indien nodig. Wij zullen uw persoonlijke informatie nergens anders voor gebruiken.</small>
