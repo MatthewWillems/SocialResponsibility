@@ -6,7 +6,7 @@
 
 <form action="<?php echo url('register.handle')?>" method="POST">
     <div>
-        <label for="email">E-mail</label>
+        <label for="email">E-mailadres</label>
         <input type="email" name="email" value="<?php echo input('email')?>" class="form-control" id="email" aria-describedby="emailHelp">
         <?php if ( isset( $errors['email'] ) ):?>
             <?php echo $errors['email']?>

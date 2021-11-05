@@ -1,9 +1,9 @@
 <?php $this->layout('layouts::website2');?>
 
 
-<h1>Welkom bij Transformers</h1>
+<h1>Home</h1>
 
-<p>Dit is de start van jullie project website!</p>
+<p>Vind hieronder informatie over mentale gezondheid.</p>
 
 
 
