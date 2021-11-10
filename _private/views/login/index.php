@@ -1,6 +1,8 @@
 <?php $this->layout('layouts::website2'); ?>
+ 
 
-<h1>Inloggen</h1>
+<div class="login">
+    <h1>Inloggen</h1>
 
 <p>Log in met je email en wachtwoord.</p>
 
@@ -15,7 +17,7 @@
     </div><br>
 
     <div>
-        <label for="email">E-mail</label>
+        <label for="email">E-mailadres</label>
         <input type="email" name="email" value="<?php echo input('email')?>" class="form-control" id="email" aria-describedby="emailHelp">
         <?php if ( isset( $errors['email'] ) ):?>
             <?php echo $errors['email']?>
@@ -29,7 +31,6 @@
             <?php echo $errors['wachtwoord']?>
         <?php endif;?>
     </div><br>
-    <hr>
     <button type="submit">Inloggen</button><br>
-
+</div>
 </form>
