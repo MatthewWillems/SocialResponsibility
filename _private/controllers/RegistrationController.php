@@ -15,36 +15,36 @@ class RegistrationController {
 	public function registrationForm() {
 
 		$template_engine = get_template_engine();
-		echo $template_engine->render('registerform');
+		echo $template_engine->render('registration/index');
 
 	}
 
     public function registrationHandler() {
         $result = validate_form($_POST);
+        print_r($result['data']);
 
         if (count($result['errors']) === 0){
 
 
-            if ( notRegistered($result['data']['email'])){
+            if ( notRegistered( $result['data']['username'] ) ){
 
                 createAccount($result['data']);
                 
-                $successUrl = url('register.success');
-                redirect($successUrl);
+                redirect(url('register.success'));
             }
             else {
-                $errors['email'] = 'Dit account bestaat al!';
+                $errors['username'] = 'Dit account bestaat al!';
             }
         }
         
         $template_engine = get_template_engine();
-        echo $template_engine->render( 'registerform', ['errors' => $result['errors']] );
+        echo $template_engine->render( 'registration/index', ['errors' => $result['errors']] );
 
     }
 
     public function registrationSuccess() {
         $template_engine = get_template_engine();
-        echo $template_engine->render('registersuccess');
+        echo $template_engine->render('registration/success');
     }
 }
 

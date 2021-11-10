@@ -12,6 +12,6 @@
     </li>
     <br>
     <li>
-        <a href="<?php echo url( 'dashboard.about' ) ?>"<?php if ( current_route_is( 'dashboard.about' ) ): ?> class="active"<?php endif ?>>Over Ons</a>
+        <a href="<?php echo url( 'about' ) ?>"<?php if ( current_route_is( 'about' ) ): ?> class="active"<?php endif ?>>Over Ons</a>
     </li>
 </ul>
